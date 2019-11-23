@@ -1,7 +1,7 @@
 package Collections.Arrays
 
 //Array is low level data structure - only use it when you need to. Consider using ArrayList instead
-fun main(args : Array<String>) {
+fun main() {
     val presidents = arrayOf(Pair("John F", "K"), Pair("Ronald", "Reagan"))
 
     presidents.forEach { println("${it.first} ${it.second}") }

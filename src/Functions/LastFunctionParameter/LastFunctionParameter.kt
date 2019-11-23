@@ -1,8 +1,7 @@
 package Functions.LastFunctionParameter
 
-fun main(Args : Array<String>) {
-    doCalculation {
-        y ->
+fun main(Args: Array<String>) {
+    doCalculation { y ->
         if (y > 10)
             y + 10
         else
@@ -10,6 +9,6 @@ fun main(Args : Array<String>) {
     }
 }
 
-fun doCalculation(calc : (Int) -> Int) {
+fun doCalculation(calc: (Int) -> Int) {
     print("This is the result ${calc(10)}")
 }

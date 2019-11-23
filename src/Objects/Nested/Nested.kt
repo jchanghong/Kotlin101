@@ -1,6 +1,6 @@
 package Objects.Nested
 
-fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     var btm = Batman()
     var rbn = Batman.Robin()
 
@@ -8,12 +8,12 @@ fun main(args : Array<String>) {
     rbn.say()
 }
 
-public class Batman() {
+class Batman {
     fun say() {
         println("This is Batman")
     }
 
-    public class Robin {
+    class Robin {
         fun say() {
             println("This is Robin")
         }

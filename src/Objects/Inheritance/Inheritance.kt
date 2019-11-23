@@ -1,6 +1,6 @@
 package Objects.Inheritance
 
-fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     //simple final class
     var final = FinalConstruct("Andrew Sullivan")
     println("His name is ${final.name}")
@@ -12,12 +12,9 @@ fun main(args : Array<String>) {
     less.sing()
 }
 
-class FinalConstruct(var name : String) {
-}
+class FinalConstruct(var name: String)
 
-open class FlexibleConstruct(var name : String) {
-
-}
+open class FlexibleConstruct(var name: String)
 
 interface Singing {
     fun sing() {
@@ -32,7 +29,5 @@ interface Dancing {
 }
 
 //You can only have one supertype but multiple interfaces
-class LessFlexible(name : String) : FlexibleConstruct(name), Singing, Dancing {
-
-}
+class LessFlexible(name: String) : FlexibleConstruct(name), Singing, Dancing
 

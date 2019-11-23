@@ -1,6 +1,6 @@
 package Functions.ExtensionsAsParameter
 
-public fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     //this refers to Robot instance
     var typeA = configurator {
         this.canFight()
@@ -11,7 +11,7 @@ public fun main(args : Array<String>) {
 
     //if the last parameter is a function, the function literal can be passed outside the parantheses
     //'this' is also optional in any case of extension function.
-    var typeB = configurator ({
+    var typeB = configurator({
         canSwim()
         canFly()
     })
@@ -25,24 +25,24 @@ public fun main(args : Array<String>) {
     typeC.show()
 }
 
-fun configurator(config : Roboto.() -> Unit) : Roboto {
+fun configurator(config: Roboto.() -> Unit): Roboto {
     var r = Roboto()
     r.config()
     return r
 }
 
-fun configurator(name : String, config : Roboto.() -> Unit) : Roboto {
+fun configurator(name: String, config: Roboto.() -> Unit): Roboto {
     var r = Roboto()
     r.giveName(name)
     r.config()
     return r
 }
 
-public class Roboto {
+class Roboto {
     var capabilities = ""
     var name = ""
 
-    fun giveName(name : String) {
+    fun giveName(name: String) {
         this.name = name
     }
 
@@ -60,8 +60,8 @@ public class Roboto {
 
     fun show() {
         if (name != "")
-            println ("$name can $capabilities")
+            println("$name can $capabilities")
         else
-            println (capabilities)
+            println(capabilities)
     }
 }

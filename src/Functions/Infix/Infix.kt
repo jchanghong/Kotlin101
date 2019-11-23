@@ -1,6 +1,6 @@
 package Functions.Infix
 
-public fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     //using a function
     val say = "Hello " add "world" //infix function call
     println(say)
@@ -17,10 +17,10 @@ public fun main(args : Array<String>) {
     println(say4)
 }
 
-infix fun String.add(more : String) : String = this + more
+infix fun String.add(more: String): String = this + more
 
-class HelloWorld() {
-    infix fun say(more : String) : String {
+class HelloWorld {
+    infix fun say(more: String): String {
         return "Hello " + more
     }
 }

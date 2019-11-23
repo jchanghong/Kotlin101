@@ -2,11 +2,11 @@ package Functions.Lambda
 
 //this is a tricky section. Pay attention
 
-fun main(Args : Array<String>) {
-    val xline : (String) -> String = { y : String -> "Full " + y }
+fun main(Args: Array<String>) {
+    val xline: (String) -> String = { y: String -> "Full " + y }
     println("Full format function literal '${xline("Moon")}'")
 
-    val xline2 : (String) -> String = { y -> "Short " + y }
+    val xline2: (String) -> String = { y -> "Short " + y }
     println("Shortened function literal '${xline2("Sticks")}'")
 
     doMore(xline2)
@@ -17,17 +17,16 @@ fun main(Args : Array<String>) {
         m
     })
 
-    doCalculation({
-        y ->
+    doCalculation({ y ->
         var m = y + 10
         m
     })
 }
 
-fun doMore(doSomething : (String) -> String) {
+fun doMore(doSomething: (String) -> String) {
     println("This is from passed function '${doSomething("Great")}'")
 }
 
-fun doCalculation(calc : (Int) -> Int) {
+fun doCalculation(calc: (Int) -> Int) {
     print("This is the result ${calc(10)}")
 }

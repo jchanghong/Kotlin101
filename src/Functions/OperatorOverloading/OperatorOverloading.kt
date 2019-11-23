@@ -1,6 +1,6 @@
 package Functions.OperatorOverloading
 
-fun main(Args : Array<String>) {
+fun main(Args: Array<String>) {
 
     var batman = SuperPower()
     batman.say()
@@ -13,8 +13,8 @@ fun main(Args : Array<String>) {
     robin.say()
 }
 
-public class SuperPower() {
-    var power : Int = 1
+class SuperPower {
+    var power: Int = 1
     var action = "Neutral"
     operator fun unaryPlus() {
         power++
@@ -30,5 +30,5 @@ public class SuperPower() {
         println(action + " " + power)
     }
 
-    override fun toString() : String = "$power"
+    override fun toString(): String = "$power"
 }

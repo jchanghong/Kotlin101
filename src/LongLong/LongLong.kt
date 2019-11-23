@@ -1,7 +1,7 @@
 package LongLong
 
 class Test {
-    private val total : Int
+    private val total: Int
         get() = 1 + 1
 
     fun print() {
@@ -9,7 +9,7 @@ class Test {
     }
 }
 
-fun main(args : Array<String>) {
+fun main() {
     val test = Test()
     test.print()
 }

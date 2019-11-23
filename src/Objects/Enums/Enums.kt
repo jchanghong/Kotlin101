@@ -1,6 +1,6 @@
 package Objects.Enums
 
-fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     print(Days.MONDAY)
 }
 

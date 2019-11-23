@@ -1,17 +1,17 @@
 package Loops
 
-fun main(args : Array<String>) {
+fun main() {
     var presidents = arrayOf("jfk", "nixon", "carter")
 
     print("I love these presidents ")
     for (p in presidents) {
-        print ("$p, ")
+        print("$p, ")
     }
 
     println("")
     print("I voted for these presidents ")
     for (p in presidents.indices) {
-        print ("${presidents[p]}, ")
+        print("${presidents[p]}, ")
     }
 
     println("")
@@ -28,5 +28,5 @@ fun main(args : Array<String>) {
     do {
         q--
         print("${presidents[q]}, ")
-    }while(q > 0)
+    } while (q > 0)
 }

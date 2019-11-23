@@ -1,7 +1,7 @@
 package Functions.LocalFunction
 
 
-public fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     fun localFunction() {
         println("I am a local function")
     }
@@ -9,7 +9,7 @@ public fun main(args : Array<String>) {
     //you can call a local function
     localFunction()
 
-    fun localFunction2(func : () -> Unit) {
+    fun localFunction2(func: () -> Unit) {
         func()
     }
 

@@ -1,6 +1,6 @@
 package Objects.ObjectClass
 
-fun main(args : Array<String>) {
+fun main(args: Array<String>) {
 
     val espana = Matador("Emilio")
 
@@ -15,17 +15,17 @@ fun main(args : Array<String>) {
     //how do you pass it to a parameter
 }
 
-class Matador(name : String) {
-    private val name : String = name
+class Matador(name: String) {
+    private val name: String = name
 
     private fun myPrivateShow() {
         println("This is ${name} private show")
     }
 
     companion object {
-        fun show(mt : Matador) {
+        fun show(mt: Matador) {
             //function inside a class object can access private properties and function of the class
-            println ("Expose the private secret of ${mt.name}")
+            println("Expose the private secret of ${mt.name}")
             mt.myPrivateShow()
         }
     }

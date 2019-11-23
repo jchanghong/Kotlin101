@@ -1,6 +1,6 @@
 package HelloWorld
 
-fun main(args : Array<String>) {
+fun main() {
     val text = "Hello World"
     println(text)
 }

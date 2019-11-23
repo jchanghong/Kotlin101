@@ -1,13 +1,13 @@
 package Functions.Closure
 
-fun main (Args : Array<String>){
+fun main(Args: Array<String>) {
     var number = 1
 
-    fun incrementAndShow(){
+    fun incrementAndShow() {
         number++
         println(number)
     }
 
-    for(x in 1..3)
+    for (x in 1..3)
         incrementAndShow()
 }

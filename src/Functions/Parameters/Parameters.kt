@@ -1,23 +1,21 @@
 package Functions.Parameters
 
 //primitive parameters (String, Int, Float, etc) is passed by value so you cannot change the value of the passed parameter
-fun primitives(name : String) {
+fun primitives(name: String) {
     //name = "John Adams"
 }
 
 //object references are also passed by value (which means you cannot change the object itself - check complex2 function) but since it is an object reference,
 //you can change the value inside the object
-fun complex(p : Person) {
+fun complex(p: Person) {
     p.firstName = "John"
     p.lastName = "Adams"
 }
 
 
-data class Person(var firstName : String, var lastName : String) {
+data class Person(var firstName: String, var lastName: String)
 
-}
-
-fun main(Args : Array<String>) {
+fun main(Args: Array<String>) {
     var president = "JFK"
     println("President name is $president")
     primitives(president)

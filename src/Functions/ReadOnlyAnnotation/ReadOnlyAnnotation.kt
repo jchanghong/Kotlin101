@@ -1,17 +1,17 @@
-package Functions.ReadOnlyAnnotation
+package functions.readonlyannotation
 
-import java.util.HashMap
+import java.util.*
 
 // TODO: complete
 
-fun names() : HashMap<String, String> {
+fun names(): HashMap<String, String> {
     return hashMapOf(
             "John" to "Adam",
             "Bryan" to "Mana"
     )
 }
 
-fun main(Args : Array<String>) {
+fun main(Args: Array<String>) {
     val names = names()
 
 }

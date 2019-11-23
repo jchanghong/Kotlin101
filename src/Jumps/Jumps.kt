@@ -1,6 +1,6 @@
 package Jumps
 
-fun main(args : Array<String>) {
+fun main() {
 
     printAgain@ println("print again")
 
@@ -8,6 +8,8 @@ fun main(args : Array<String>) {
         print("$i,")
         if (i == 25) {
             break@loop
+        }
+        if (i == 50) {
         }
     }
     println("")

@@ -2,13 +2,13 @@ package Objects.DataClass
 
 /* This sample demonstrates various features that you get from using a data class */
 
-public data class Superhero(val firstName : String, val lastName : String)
+data class Superhero(val firstName: String, val lastName: String)
 
-fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     var superman = Superhero("clark", "kent")
 
     //Automatic toString generation
-    println("Superman is  ${superman.toString()}")
+    println("Superman is  $superman")
 
     //Automatic hashCode
     println("Superman hashcode is ${superman.hashCode()}")
@@ -27,17 +27,17 @@ fun main(args : Array<String>) {
     println("is .lastName equals to .component2? $isLastName")
 
     //multi declarations
-    val hero = { x : Superhero -> x }
-    val(firstName, lastName ) = hero(superman)
+    val hero = { x: Superhero -> x }
+    val (firstName, lastName) = hero(superman)
 
     println("Our superhero name is $firstName $lastName")
 
     //another sample of multi declarations
-    fun supercharge(x : Superhero) : Superhero {
+    fun supercharge(x: Superhero): Superhero {
         var m = Superhero(x.firstName.toUpperCase(), x.lastName.toUpperCase())
         return m
     }
 
-    val(firstName2, lastName2) = supercharge(superman)
+    val (firstName2, lastName2) = supercharge(superman)
     println("Our supercharged superhero name is $firstName2 $lastName2")
 }

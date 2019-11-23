@@ -2,7 +2,7 @@ package Objects.Delegation
 
 //This is a neat little feature being able to automatically assign an object to handle any interface
 
-fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     var me = BruceWayne(Batman(), RichyRich())
     me.inWater()
     print("Is awesomely rich? " + me.isAwesomelyRich())
@@ -15,10 +15,10 @@ interface Superpower {
 }
 
 interface Wealth {
-    fun isAwesomelyRich() : Boolean
+    fun isAwesomelyRich(): Boolean
 }
 
-public class Batman() : Superpower {
+class Batman : Superpower {
     companion object {
         fun create() = Batman()
     }
@@ -35,15 +35,15 @@ public class Batman() : Superpower {
         println("Awesome")
     }
 
-    fun isFun() : Boolean {
+    fun isFun(): Boolean {
         return false
     }
 }
 
-public class RichyRich : Wealth {
-    override fun isAwesomelyRich() : Boolean {
+class RichyRich : Wealth {
+    override fun isAwesomelyRich(): Boolean {
         return true
     }
 }
 
-public class BruceWayne(a : Batman, b : RichyRich) : Superpower by a, Wealth by b
+class BruceWayne(a: Batman, b: RichyRich) : Superpower by a, Wealth by b

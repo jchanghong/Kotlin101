@@ -1,6 +1,6 @@
 package Objects.Properties
 
-fun main(args : Array<String>) {
+fun main(args: Array<String>) {
     //you cannot change johnClark name. It's immutable
     var johnC = Person("John", "Clark")
     println("The name is ${johnC.firstName} ${johnC.lastName}")
@@ -16,32 +16,29 @@ fun main(args : Array<String>) {
 }
 
 //This will make two immutable properties
-class Person(val firstName : String, val lastName : String)
+class Person(val firstName: String, val lastName: String)
 
 //This is another way to declare the immutable properties.
-class Soldier(firstName : String, lastName : String) {
-    public val firstName : String = firstName
-    public val lastName : String = lastName
+class Soldier(firstName: String, lastName: String) {
+    val firstName: String = firstName
+    val lastName: String = lastName
 }
 
 //Property with backing field
 //The compiler only generates a backing field if it is used by the accessors.
-class UniversalSoldier(firstName : String, lastName : String) {
-    public var firstName : String = firstName
+class UniversalSoldier(firstName: String, lastName: String) {
+    var firstName: String = firstName
         get() {
             return "Universal " + field
         }
-        set(value) {
-            field = value
-        }
 
-    public var lastName : String = lastName
+    var lastName: String = lastName
 }
 
 //property with old java style
-class UltimateSoldier(firstName : String, lastName : String) {
+class UltimateSoldier(firstName: String, lastName: String) {
     private var _firstName = ""
-    public var firstName : String
+    var firstName: String
         get() {
             return _firstName
         }
@@ -50,7 +47,7 @@ class UltimateSoldier(firstName : String, lastName : String) {
         }
 
     private var _lastName = ""
-    public var lastName : String
+    var lastName: String
         get() {
             return _lastName
         }

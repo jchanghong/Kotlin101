@@ -2,7 +2,7 @@ package Variables
 
 //There are two type of variable declarations in kotlin, mutable and immutable.
 //use var declaration for mutable variables and val for immutable variables
-fun main(args : Array<String>) {
+fun main() {
     var message = "var means a mutable variable so you can change it. "
     println("'message' variable has this value '$message'")
     message = "wallah, modified"
