@@ -1,7 +1,6 @@
 package Functions.ReadOnlyAnnotation
 
 import java.util.HashMap
-import org.jetbrains.annotations.ReadOnly
 
 // TODO: complete
 
